@@ -4,4 +4,7 @@ from app import app #first app- is an packat, second app- is the varible defiine
 @app.route('/index')
 
 def index():
-    return 'Hello, World!'
+    user= {'username': 'Sarah'}
+    #return 'Hello, ' + user['username']
+    return  render_template('index.html', title='Home', user=user)
+
