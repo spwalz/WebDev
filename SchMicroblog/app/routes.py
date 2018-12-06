@@ -15,18 +15,18 @@ def index():
     #Fake user
     user = {'username':'Payton'}
     #fake list of posts
-    posts = {
-        {
-            'author':{'username':'Aaina'}
+    posts = [
+            {
+            'author':{'username':'Aaina'},
             'body':'My name is Aaina, How\'s life?'
-            }
-        {
-            'author':{'username':'Sarah'}
+            },
+            {
+            'author':{'username':'Sarah'},
             'body':'How you doin\', Payton?'
             }
-        }
+        ]
 
     #could integrate html direct into app, but bad practice.
     #instead, html with enough variables to account for whatever is in
     #the html code
-    return render_template('index.html', title = 'Home', user = user)
+    return render_template('index.html', title = 'Home', user = user, posts= posts)

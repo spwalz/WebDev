@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<!--conditional statement if var title exists-->
+		{% if title %}
+		<title>{{title}} - SchMicroblog</title>
+		{% else %}
+		<title>Welcome to SchMicroblog!</title>
+		{% endif %}
+	</head>
+	<body>
+		<div>Microblog: <a href="/index">Home</a></div>
+		{% block content %}{% endblock %}
+	</body>
+</html>
